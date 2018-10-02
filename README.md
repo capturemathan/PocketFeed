@@ -1,4 +1,4 @@
-![Pocket Feed](https://github.com/capturemathan/PocketFeed/blob/master/Feature Graphic.jpg?raw=true)
+![Pocket Feed](https://github.com/capturemathan/PocketFeed/blob/master/Banner.jpg?raw=true)
 
 [<img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="200" alt="Get Pocket Feed on Google Play" />](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed "Get Pocket Feed on Google Play")
 
