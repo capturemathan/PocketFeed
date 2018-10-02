@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/aboutlogo"
+                android:layout_width="100dp"
+                android:layout_height="141.4dp"
+                android:layout_gravity="center"
+                android:src="@drawable/news" />
+
+            <TextView
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dustismo_bold"
+                android:text="Pocket Feed"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/versioncode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Version: 1.0"
+                android:textSize="24sp" />
+
+            <TextView
+                android:textColor="@color/primary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/dustismo_bold"
+                android:text="By Mathana Kumar. S"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:paddingLeft="32dp"
+                android:paddingRight="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/primary_text"
+                android:id="@+id/note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textSize="22sp"
+                android:layout_centerHorizontal="true"
+                android:text="The Top 20 national proceedings at your fingertips. Neat Split of newsfeed by categories for enhanced readability. Enabled small thumbnails for each feed."/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/dustismo"
+                android:text="For further details :"
+                />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp"
+                android:paddingBottom="30dp"
+                android:text="capturemathan.github.io"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

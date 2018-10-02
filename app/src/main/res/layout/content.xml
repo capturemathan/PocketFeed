@@ -1,0 +1,166 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.absentsir.Content">
+
+        <TextView
+            android:textColor="@color/primary_text"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select your Preference"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/businessimg"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/business"
+                android:onClick="business"/>
+
+            <TextView
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/international"
+                style="@style/CategoryStyle"
+                android:text="Business"
+                android:onClick="business"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/entertainmentimg"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/entertainment"
+                android:onClick="entertainment"/>
+
+            <TextView
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/entertainment"
+                style="@style/CategoryStyle"
+                android:text="Entertainment"
+                android:onClick="entertainment"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/healthimg"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/health"
+                android:onClick="health"/>
+
+            <TextView
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/health"
+                style="@style/CategoryStyle"
+                android:text="Health"
+                android:onClick="health"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/scienceimg"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/science"
+                android:onClick="science"/>
+
+            <TextView
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/science"
+                style="@style/CategoryStyle"
+                android:text="Science"
+                android:onClick="science"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/sportsimg"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/sports"
+                android:onClick="sport"/>
+
+            <TextView
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/sports"
+                style="@style/CategoryStyle"
+                android:text="Sports"
+                android:onClick="sport"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/technologyimg"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/tech"
+                android:onClick="tech"/>
+
+            <TextView
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/technology"
+                style="@style/CategoryStyle"
+                android:text="Technology"
+                android:onClick="tech"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
