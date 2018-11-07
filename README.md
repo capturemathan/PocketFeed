@@ -1,5 +1,6 @@
-[![Play Store Info](https://img.shields.io/badge/Play_Store-v1.0-36B0C1.svg?style=flat-square&v=1.0)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed) [![Play Store Downloads](https://img.shields.io/badge/Downloads-100+-E04253.svg?style=flat-square?)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)
+[![Play Store Info](https://img.shields.io/badge/Play_Store-v1.0-36B0C1.svg?style=flat-square&v=1.0)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed) [![Play Store Downloads](https://img.shields.io/badge/Downloads-100+-E04253.svg?style=flat-square)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)
 
+# Pocket Feed
 ![Pocket Feed](https://github.com/capturemathan/PocketFeed/blob/master/Banner.jpg?raw=true)
 
 [<img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="200" alt="Get Pocket Feed on Google Play" />](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed "Get Pocket Feed on Google Play")
