@@ -1,5 +1,6 @@
 package io.github.capturemathan.pocketfeed;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,11 +12,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.Picasso;
+
+import java.io.File;
 import java.io.InputStream;
 
 public class Description extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.description);
@@ -28,32 +34,7 @@ public class Description extends AppCompatActivity{
 
         final String imgUrl=(String)b.get("Pic");
         final ImageView imageView=(ImageView)findViewById(R.id.descimage);
-        final Bitmap[] bmp = {null};
-        try {
-            Thread thread = new Thread(new Runnable(){
-                @Override
-                public void run() {
-                    try {
-                        //Your code goes here
-                        InputStream in = new java.net.URL(imgUrl).openStream();
-                        bmp[0] = BitmapFactory.decodeStream(in);
-                        imageView.setImageBitmap(bmp[0]);
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-
-            thread.start();
-            //URL imgurl = new URL(currentarticle.getImgUrl());
-            //Bitmap bmp = BitmapFactory.decodeStream(imgurl.openConnection().getInputStream());
-            //img.setImageBitmap(bmp);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
+        Picasso.get().load(imgUrl).into(imageView);
         final String url=(String)b.get("Url");
 
         Button button=findViewById(R.id.articleurl);
@@ -67,5 +48,46 @@ public class Description extends AppCompatActivity{
                 }
             }
         });
+
+        Button but = findViewById(R.id.shareurl);
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "Sharing URL");
+                i.putExtra(Intent.EXTRA_TEXT, url);
+                startActivity(Intent.createChooser(i, "Share Article"));
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        deleteCache(getBaseContext());
+    }
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) { e.printStackTrace();}
+    }
+
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if(dir!= null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
     }
 }

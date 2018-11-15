@@ -9,6 +9,8 @@
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -27,15 +29,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/businessimg"
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="16dp"
                 android:src="@drawable/business"
-                android:onClick="business"/>
+                app:riv_corner_radius="40dip"
+                android:layout_marginRight="16dp"/>
 
             <TextView
+                android:background="@drawable/rounded_txtview"
                 android:textSize="21sp"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
@@ -52,15 +55,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/entertainmentimg"
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="16dp"
                 android:src="@drawable/entertainment"
-                android:onClick="entertainment"/>
+                app:riv_corner_radius="40dip"
+                android:layout_marginRight="16dp"/>
 
             <TextView
+                android:background="@drawable/rounded_txtview"
                 android:textSize="21sp"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
@@ -74,15 +78,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/healthimg"
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="16dp"
                 android:src="@drawable/health"
-                android:onClick="health"/>
+                app:riv_corner_radius="20dip"
+                android:layout_marginRight="16dp"/>
 
             <TextView
+                android:background="@drawable/rounded_txtview"
                 android:textSize="21sp"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
@@ -97,15 +102,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/scienceimg"
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="16dp"
                 android:src="@drawable/science"
-                android:onClick="science"/>
+                app:riv_corner_radius="20dip"
+                android:layout_marginRight="16dp"/>
 
             <TextView
+                android:background="@drawable/rounded_txtview"
                 android:textSize="21sp"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
@@ -120,15 +126,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/sportsimg"
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="16dp"
                 android:src="@drawable/sports"
-                android:onClick="sport"/>
+                app:riv_corner_radius="20dip"
+                android:layout_marginRight="16dp"/>
 
             <TextView
+                android:background="@drawable/rounded_txtview"
                 android:textSize="21sp"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
@@ -143,15 +150,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/technologyimg"
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="88dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="16dp"
                 android:src="@drawable/tech"
-                android:onClick="tech"/>
+                app:riv_corner_radius="20dip"
+                android:layout_marginRight="16dp"/>
 
             <TextView
+                android:background="@drawable/rounded_txtview"
                 android:textSize="21sp"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"

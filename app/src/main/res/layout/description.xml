@@ -4,42 +4,56 @@
     android:fillViewport="true"
     android:scrollbars="none">
 
-    <RelativeLayout
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".Description"
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".Description">
 
         <ImageView
-            android:layout_margin="18dp"
             android:id="@+id/descimage"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
-            android:scaleType="centerCrop"
-            />
-        <TextView
             android:layout_margin="18dp"
-            android:textColor="@color/primary_text"
+            android:scaleType="centerCrop" />
+
+        <TextView
             android:id="@+id/desctext"
-            android:layout_below="@+id/descimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:layout_below="@+id/descimage"
             android:layout_centerHorizontal="true"
-            />
+            android:layout_margin="18dp"
+            android:textColor="@color/primary_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <Button
-            android:textSize="18sp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
+            android:background="@color/colorAccent"
             android:id="@+id/articleurl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/desctext"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
             android:text="View Detailed Article"
             android:textAllCaps="true"
             android:textColor="@color/icons"
-            android:background="@color/colorAccent"/>
+            android:textSize="18sp" />
+
+        <Button
+            android:background="@color/colorAccent"
+            android:id="@+id/shareurl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/articleurl"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="18dp"
+            android:text="Share this article"
+            android:textAllCaps="true"
+            android:textColor="@color/icons"
+            android:textSize="18sp" />
     </RelativeLayout>
 </ScrollView>

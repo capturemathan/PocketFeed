@@ -73,6 +73,7 @@
                 android:layout_centerHorizontal="true">
 
                 <Button
+                    android:background="@color/colorAccent"
                     android:textSize="18sp"
                     android:layout_marginTop="0dp"
                     android:layout_marginLeft="18dp"
@@ -81,7 +82,6 @@
                     android:layout_width="match_parent"
                     android:layout_toRightOf="@id/about"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorAccent"
                     android:text="Catch The Latest News"
                     android:textColor="@color/icons"
                     android:onClick="proceed"/>
