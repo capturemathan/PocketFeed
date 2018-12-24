@@ -1,7 +1,10 @@
 [![Play Store Info](https://img.shields.io/badge/Play_Store-v1.1-36B0C1.svg?style=flat-square&v=1.1)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed) [![Play Store Downloads](https://img.shields.io/badge/Downloads-100+-E04253.svg?style=flat-square)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)  [![Play Store Ratings](https://img.shields.io/badge/Ratings-4.91-brightgreen.svg?style=flat-square)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)
 
 # Pocket Feed
-![Pocket Feed](https://github.com/capturemathan/PocketFeed/blob/master/Banner.jpg?raw=true)
+<img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/Main%20Screen.png">
+<img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/Contents.png">
+<img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/News%20Capsule.png">
+<img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/Detailed.png">
 
 [<img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="200" alt="Get Pocket Feed on Google Play" />](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed "Get Pocket Feed on Google Play")
 
