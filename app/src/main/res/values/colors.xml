@@ -6,4 +6,6 @@
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#212121</color>
     <color name="icons">#FFFFFF</color>
+    <color name="fbutton_default_color">#3eadeb</color>
+    <color name="fbutton_default_shadow_color">#ff3493c8</color>
 </resources>

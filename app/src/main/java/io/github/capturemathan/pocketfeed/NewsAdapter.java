@@ -1,5 +1,6 @@
 package io.github.capturemathan.pocketfeed;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
@@ -12,18 +13,19 @@ import android.widget.TextView;
 
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class NewsAdapter extends ArrayAdapter<News>{
+public class NewsAdapter extends ArrayAdapter<News> {
 
     private int mColorResourceId;
     private Context mContext;
 
-    public NewsAdapter(Context context, List<News>newsfeed,int colorResourceId)
-    {
-        super(context,0,newsfeed);
-        mColorResourceId=colorResourceId;
-        mContext=context;
+    public NewsAdapter(Context context, List<News> newsfeed, int colorResourceId) {
+        super(context, 0, newsfeed);
+        mColorResourceId = colorResourceId;
+        mContext = context;
     }
 
     @Override
@@ -33,7 +35,7 @@ public class NewsAdapter extends ArrayAdapter<News>{
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.news_list_item, parent, false);
+                    R.layout.news_card, parent, false);
         }
 
         final News currentarticle = getItem(position);
@@ -43,14 +45,15 @@ public class NewsAdapter extends ArrayAdapter<News>{
         TextView newstitle = (TextView) listItemView.findViewById(R.id.newstitle);
         newstitle.setText(currentarticle.getTitle());
 
-        View textContainer = listItemView.findViewById(R.id.text_container);
+        //View textContainer = listItemView.findViewById(R.id.text_container);
 
-        int color = ContextCompat.getColor(getContext(), mColorResourceId);
-        textContainer.setBackgroundColor(color);
+        //int color = ContextCompat.getColor(getContext(), mColorResourceId);
+        //textContainer.setBackgroundColor(color);
 
         listItemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent i = new Intent(getContext(), Description.class);
                 i.putExtra("Desc", currentarticle.getDesc());
                 i.putExtra("Pic", currentarticle.getImgUrl());

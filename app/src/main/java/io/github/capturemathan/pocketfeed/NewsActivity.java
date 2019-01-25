@@ -20,7 +20,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>>{
+public class NewsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
 
     public static final String LOG_TAG = NewsActivity.class.getName();
 
@@ -41,34 +41,23 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_activity);
 
-        if(Content.id==1)
-        {
-            NEWS_FETCH_URL="https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=c60dc7c66a474c03ba181227554788ee";
-        }
-        else if(Content.id==2)
-        {
-            NEWS_FETCH_URL="https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=c60dc7c66a474c03ba181227554788ee";
-        }
-        else if(Content.id==3)
-        {
-            NEWS_FETCH_URL="https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=c60dc7c66a474c03ba181227554788ee";
-        }
-        else if(Content.id==4)
-        {
-            NEWS_FETCH_URL="https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=c60dc7c66a474c03ba181227554788ee";
-        }
-        else if(Content.id==5)
-        {
-            NEWS_FETCH_URL="https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=c60dc7c66a474c03ba181227554788ee";
-        }
-        else
-        {
-            NEWS_FETCH_URL="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=c60dc7c66a474c03ba181227554788ee";
+        if (MainActivity.id == 1) {
+            NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=c60dc7c66a474c03ba181227554788ee";
+        } else if (MainActivity.id == 2) {
+            NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=c60dc7c66a474c03ba181227554788ee";
+        } else if (MainActivity.id == 3) {
+            NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=c60dc7c66a474c03ba181227554788ee";
+        } else if (MainActivity.id == 4) {
+            NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=c60dc7c66a474c03ba181227554788ee";
+        } else if (MainActivity.id == 5) {
+            NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=c60dc7c66a474c03ba181227554788ee";
+        } else {
+            NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=c60dc7c66a474c03ba181227554788ee";
         }
 
         final ListView newsListView = (ListView) findViewById(R.id.list);
 
-        mAdapter = new NewsAdapter(this,new ArrayList<News>(),R.color.colorPrimaryDark);
+        mAdapter = new NewsAdapter(this, new ArrayList<News>(), R.color.colorPrimaryDark);
 
         newsListView.setAdapter(mAdapter);
 
@@ -102,7 +91,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
 
         Uri baseUri = Uri.parse(NEWS_FETCH_URL);
-        return new NewsLoader(this,baseUri.toString());
+        return new NewsLoader(this, baseUri.toString());
     }
 
     @Override
@@ -135,11 +124,14 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onDestroy();
         deleteCache(getBaseContext());
     }
+
     public static void deleteCache(Context context) {
         try {
             File dir = context.getCacheDir();
             deleteDir(dir);
-        } catch (Exception e) { e.printStackTrace();}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean deleteDir(File dir) {
@@ -152,7 +144,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
                 }
             }
             return dir.delete();
-        } else if(dir!= null && dir.isFile()) {
+        } else if (dir != null && dir.isFile()) {
             return dir.delete();
         } else {
             return false;

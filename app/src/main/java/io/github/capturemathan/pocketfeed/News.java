@@ -7,7 +7,7 @@ class News {
     private String mUrl;
     private String mImgUrl;
 
-    public News(String title,String desc,String url,String imgurl) {
+    public News(String title, String desc, String url, String imgurl) {
         mTitle = title;
         mDesc = desc;
         mUrl = url;

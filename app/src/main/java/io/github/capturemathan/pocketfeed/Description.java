@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.io.InputStream;
 
-public class Description extends AppCompatActivity{
+public class Description extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -32,12 +32,12 @@ public class Description extends AppCompatActivity{
         TextView txt = (TextView) findViewById(R.id.desctext);
         txt.setText(st);
 
-        final String imgUrl=(String)b.get("Pic");
-        final ImageView imageView=(ImageView)findViewById(R.id.descimage);
+        final String imgUrl = (String) b.get("Pic");
+        final ImageView imageView = (ImageView) findViewById(R.id.descimage);
         Picasso.get().load(imgUrl).into(imageView);
-        final String url=(String)b.get("Url");
+        final String url = (String) b.get("Url");
 
-        Button button=findViewById(R.id.articleurl);
+        Button button = findViewById(R.id.articleurl);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,11 +67,14 @@ public class Description extends AppCompatActivity{
         super.onDestroy();
         deleteCache(getBaseContext());
     }
+
     public static void deleteCache(Context context) {
         try {
             File dir = context.getCacheDir();
             deleteDir(dir);
-        } catch (Exception e) { e.printStackTrace();}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean deleteDir(File dir) {
@@ -84,7 +87,7 @@ public class Description extends AppCompatActivity{
                 }
             }
             return dir.delete();
-        } else if(dir!= null && dir.isFile()) {
+        } else if (dir != null && dir.isFile()) {
             return dir.delete();
         } else {
             return false;

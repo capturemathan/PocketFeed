@@ -5,11 +5,9 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/about"
-        android:title="About"
-        />
+        android:title="About" />
     <item
         android:id="@+id/bug"
-        android:title="Report a bug"
-        />
+        android:title="Report a bug" />
 
 </menu>

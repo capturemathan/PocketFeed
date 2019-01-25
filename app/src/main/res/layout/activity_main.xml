@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:scrollbars="none">
+    android:scrollbars="none"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <TextView
-            android:textSize="18dp"
             android:id="@+id/myname"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:textAlignment="center"
-            android:layout_marginBottom="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
             android:text="© Mathana Kumar. S"
-            />
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
 
             <TextView
-                android:textAllCaps="true"
+                android:textColor="@color/primary_text"
                 android:id="@+id/app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="16dp"
+                android:text="Pocket Feed"
+                android:textAllCaps="true"
                 android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_centerHorizontal="true"
-                android:text="Pocket Feed"/>
+                android:textStyle="bold" />
+
             <TextView
-                android:gravity="center"
-                android:textSize="25sp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:layout_centerHorizontal="true"
                 android:id="@+id/aboutapp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/app_name"
-                android:text="The latest and crisp newsfeed at your fingertips."/>
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="The latest and crisp newsfeed at your fingertips."
+                android:textSize="25sp" />
 
             <ImageView
-                android:layout_below="@+id/aboutapp"
                 android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="180dp"
+                android:layout_below="@+id/aboutapp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="16dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/news"/>
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/news" />
+
             <RelativeLayout
-                android:paddingTop="10dp"
-                android:layout_below="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true"
                 android:orientation="horizontal"
-                android:layout_centerHorizontal="true">
+                android:paddingTop="10dp">
 
                 <Button
-                    android:background="@color/colorAccent"
-                    android:textSize="18sp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginRight="18dp"
                     android:id="@+id/proceed"
                     android:layout_width="match_parent"
-                    android:layout_toRightOf="@id/about"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_toRightOf="@id/about"
+                    android:background="@color/colorAccent"
                     android:text="Catch The Latest News"
                     android:textColor="@color/icons"
-                    android:onClick="proceed"/>
+                    android:textSize="18sp" />
 
             </RelativeLayout>
         </RelativeLayout>
