@@ -4,6 +4,7 @@
 <img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Home%20Screen.png">
 <img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Content.png">
 <img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Description.png">
+<img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/About.png">
 
 [<img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="200" alt="Get Pocket Feed on Google Play" />](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed "Get Pocket Feed on Google Play")
 
@@ -19,7 +20,7 @@
 -> Enabled Card View for rich user experience.<br />
 -> Bug Fixes.<br />
 
-## Previous Versions (v1.1)
+## Previous Version (v1.1)
 -> All new attractive Material Design.<br />
 -> Enabled Push Notifications.<br />
 -> Share your favorite articles.<br />
