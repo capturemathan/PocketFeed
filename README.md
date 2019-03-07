@@ -1,10 +1,10 @@
-[![Play Store Info](https://img.shields.io/badge/Play_Store-v1.1-36B0C1.svg?style=flat-square&v=1.1)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed) [![Play Store Downloads](https://img.shields.io/badge/Downloads-100+-E04253.svg?style=flat-square)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)  [![Play Store Ratings](https://img.shields.io/badge/Ratings-4.91-brightgreen.svg?style=flat-square)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)
+[![Play Store Info](https://img.shields.io/badge/Play_Store-v1.2-36B0C1.svg?style=flat-square&v=1.2)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed) [![Play Store Downloads](https://img.shields.io/badge/Downloads-100+-E04253.svg?style=flat-square)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)  [![Play Store Ratings](https://img.shields.io/badge/Ratings-4.92-brightgreen.svg?style=flat-square)](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed)
 
 # Pocket Feed
-<img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/Main%20Screen.png">
-<img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/Contents.png">
-<img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/News%20Capsule.png">
-<img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/Detailed.png">
+<img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Home%20Screen.png">
+<img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Content.png">
+<img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Description.png">
+<img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/About.png">
 
 [<img src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="200" alt="Get Pocket Feed on Google Play" />](https://play.google.com/store/apps/details?id=io.github.capturemathan.pocketfeed "Get Pocket Feed on Google Play")
 
@@ -15,7 +15,12 @@
 -> News brought from across various sources.<br />
 -> An option to view the full detailed article is also provided.<br />
 
-## What's New (v1.1)
+## What's New (v1.2)
+-> All new UI with picture filled screen that give a treat to the eyes.<br />
+-> Enabled Card View for rich user experience.<br />
+-> Bug Fixes.<br />
+
+## Previous Version (v1.1)
 -> All new attractive Material Design.<br />
 -> Enabled Push Notifications.<br />
 -> Share your favorite articles.<br />
