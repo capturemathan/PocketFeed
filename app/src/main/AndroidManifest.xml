@@ -13,18 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Content"
-            android:label="Content"
-            android:parentActivityName=".MainActivity"/>
         <activity android:name=".NewsActivity"
             android:label="News Capsules"
-            android:parentActivityName=".Content"/>
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".About"
             android:label="About"
             android:parentActivityName=".MainActivity"/>

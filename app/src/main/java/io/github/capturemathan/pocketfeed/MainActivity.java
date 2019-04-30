@@ -20,13 +20,13 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
-    private FirebaseAnalytics mFirebaseAnalytics;
+    //private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_images);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        //mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         View menu_fab1 = findViewById(R.id.fab1);
         menu_fab1.setOnLongClickListener(new View.OnLongClickListener() {
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         //NEWS_CAT_URL="category=technology&apiKey=c60dc7c66a474c03ba181227554788ee";
         id = 1;
         params.putString("Category", "Technology");
-        mFirebaseAnalytics.logEvent("SelectedCategory_Technology", params);
+        //mFirebaseAnalytics.logEvent("SelectedCategory_Technology", params);
         Intent i = new Intent(MainActivity.this, NewsActivity.class);
         startActivity(i);
     }
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         //NEWS_CAT_URL="category=business&apiKey=c60dc7c66a474c03ba181227554788ee";
         id = 2;
         params.putString("Category", "Business");
-        mFirebaseAnalytics.logEvent("SelectedCategory_Business", params);
+        //mFirebaseAnalytics.logEvent("SelectedCategory_Business", params);
         Intent i = new Intent(MainActivity.this, NewsActivity.class);
         startActivity(i);
     }
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         //NEWS_CAT_URL="category=entertainment&apiKey=c60dc7c66a474c03ba181227554788ee";
         id = 3;
         params.putString("Category", "Entertainment");
-        mFirebaseAnalytics.logEvent("SelectedCategory_Entertainment", params);
+        //mFirebaseAnalytics.logEvent("SelectedCategory_Entertainment", params);
         Intent i = new Intent(MainActivity.this, NewsActivity.class);
         startActivity(i);
     }
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         //NEWS_CAT_URL="category=health&apiKey=c60dc7c66a474c03ba181227554788ee";
         id = 4;
         params.putString("Category", "Health");
-        mFirebaseAnalytics.logEvent("SelectedCategory_Health", params);
+        //mFirebaseAnalytics.logEvent("SelectedCategory_Health", params);
         Intent i = new Intent(MainActivity.this, NewsActivity.class);
         startActivity(i);
     }
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         //NEWS_CAT_URL="category=science&apiKey=c60dc7c66a474c03ba181227554788ee";
         id = 5;
         params.putString("Category", "Science");
-        mFirebaseAnalytics.logEvent("SelectedCategory_Science", params);
+        //mFirebaseAnalytics.logEvent("SelectedCategory_Science", params);
         Intent i = new Intent(MainActivity.this, NewsActivity.class);
         startActivity(i);
     }
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         //NEWS_CAT_URL="category=sports&apiKey=c60dc7c66a474c03ba181227554788ee";
         id = 6;
         params.putString("Category", "Sport");
-        mFirebaseAnalytics.logEvent("SelectedCategory_Sport", params);
+        //mFirebaseAnalytics.logEvent("SelectedCategory_Sport", params);
         Intent i = new Intent(MainActivity.this, NewsActivity.class);
         startActivity(i);
     }
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void bug(View view) {
         params.putString("MenuCategory", "Bug");
-        mFirebaseAnalytics.logEvent("MenuSelectedCategory_Bug", params);
+        //mFirebaseAnalytics.logEvent("MenuSelectedCategory_Bug", params);
         Intent it = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                 "mailto", "capturesmk@gmail.com", null));
         it.putExtra(Intent.EXTRA_SUBJECT, "Regarding Bug in Pocket Feed App");
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void rateme(View view) {
         params.putString("MenuCategory", "Ratings");
-        mFirebaseAnalytics.logEvent("MenuSelectedCategory_Ratings", params);
+        //mFirebaseAnalytics.logEvent("MenuSelectedCategory_Ratings", params);
         final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void knowme(View view) {
         params.putString("MenuCategory", "Profile");
-        mFirebaseAnalytics.logEvent("MenuSelectedCategory_Profile", params);
+        //mFirebaseAnalytics.logEvent("MenuSelectedCategory_Profile", params);
         Intent i = new Intent(MainActivity.this, About.class);
         startActivity(i);
     }
