@@ -13,7 +13,6 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 
 import info.hoang8f.fbutton.R;
 
@@ -21,7 +20,7 @@ import info.hoang8f.fbutton.R;
  * Created by hoang8f on 5/5/14.
  */
 
-public class FButton extends android.support.v7.widget.AppCompatButton implements View.OnTouchListener {
+public class FButton extends androidx.appcompat.widget.AppCompatButton implements View.OnTouchListener {
 
     //Custom values
     private boolean isShadowEnabled = true;

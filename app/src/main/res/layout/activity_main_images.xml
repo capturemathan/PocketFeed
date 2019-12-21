@@ -267,7 +267,7 @@
                 app:menu_radius="130dp"
                 app:menu_scr="@drawable/menu_icon">
 
-                <android.support.design.widget.FloatingActionButton
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -275,14 +275,14 @@
                     android:onClick="bug"
                     android:src="@drawable/menu_bug" />
 
-                <android.support.design.widget.FloatingActionButton
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="rateme"
                     android:src="@drawable/menu_rate" />
 
-                <android.support.design.widget.FloatingActionButton
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
