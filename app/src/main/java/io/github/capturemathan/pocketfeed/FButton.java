@@ -22,6 +22,7 @@ import info.hoang8f.fbutton.R;
 
 public class FButton extends androidx.appcompat.widget.AppCompatButton implements View.OnTouchListener {
 
+    boolean isShadowColorDefined = false;
     //Custom values
     private boolean isShadowEnabled = true;
     private int mButtonColor;
@@ -36,8 +37,6 @@ public class FButton extends androidx.appcompat.widget.AppCompatButton implement
     //Background drawable
     private Drawable pressedDrawable;
     private Drawable unpressedDrawable;
-
-    boolean isShadowColorDefined = false;
 
     public FButton(Context context) {
         super(context);
@@ -219,34 +218,6 @@ public class FButton extends androidx.appcompat.widget.AppCompatButton implement
         return layerDrawable;
     }
 
-    //Setter
-    public void setShadowEnabled(boolean isShadowEnabled) {
-        this.isShadowEnabled = isShadowEnabled;
-        setShadowHeight(0);
-        refresh();
-    }
-
-    public void setButtonColor(int buttonColor) {
-        this.mButtonColor = buttonColor;
-        refresh();
-    }
-
-    public void setShadowColor(int shadowColor) {
-        this.mShadowColor = shadowColor;
-        isShadowColorDefined = true;
-        refresh();
-    }
-
-    public void setShadowHeight(int shadowHeight) {
-        this.mShadowHeight = shadowHeight;
-        refresh();
-    }
-
-    public void setCornerRadius(int cornerRadius) {
-        this.mCornerRadius = cornerRadius;
-        refresh();
-    }
-
     public void setFButtonPadding(int left, int top, int right, int bottom) {
         mPaddingLeft = left;
         mPaddingRight = right;
@@ -266,19 +237,47 @@ public class FButton extends androidx.appcompat.widget.AppCompatButton implement
         return isShadowEnabled;
     }
 
+    //Setter
+    public void setShadowEnabled(boolean isShadowEnabled) {
+        this.isShadowEnabled = isShadowEnabled;
+        setShadowHeight(0);
+        refresh();
+    }
+
     public int getButtonColor() {
         return mButtonColor;
+    }
+
+    public void setButtonColor(int buttonColor) {
+        this.mButtonColor = buttonColor;
+        refresh();
     }
 
     public int getShadowColor() {
         return mShadowColor;
     }
 
+    public void setShadowColor(int shadowColor) {
+        this.mShadowColor = shadowColor;
+        isShadowColorDefined = true;
+        refresh();
+    }
+
     public int getShadowHeight() {
         return mShadowHeight;
     }
 
+    public void setShadowHeight(int shadowHeight) {
+        this.mShadowHeight = shadowHeight;
+        refresh();
+    }
+
     public int getCornerRadius() {
         return mCornerRadius;
+    }
+
+    public void setCornerRadius(int cornerRadius) {
+        this.mCornerRadius = cornerRadius;
+        refresh();
     }
 }

@@ -3,20 +3,46 @@ package io.github.capturemathan.pocketfeed;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-
-import androidx.core.view.GravityCompat;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
-
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     //private FirebaseAnalytics mFirebaseAnalytics;
+
+    //String NEWS_CAT_URL; //="category=business&apiKey=c60dc7c66a474c03ba181227554788ee";
+    public static int id = 0;
+    Bundle params = new Bundle();
+
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if (dir != null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +83,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    //String NEWS_CAT_URL; //="category=business&apiKey=c60dc7c66a474c03ba181227554788ee";
-    public static int id = 0;
-    Bundle params = new Bundle();
 
     public void tech(View view) {
         //NEWS_CAT_URL="category=technology&apiKey=c60dc7c66a474c03ba181227554788ee";
@@ -116,37 +138,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         deleteCache(getBaseContext());
-    }
-
-    public static void deleteCache(Context context) {
-        try {
-            File dir = context.getCacheDir();
-            deleteDir(dir);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static boolean deleteDir(File dir) {
-        if (dir != null && dir.isDirectory()) {
-            String[] children = dir.list();
-            for (int i = 0; i < children.length; i++) {
-                boolean success = deleteDir(new File(dir, children[i]));
-                if (!success) {
-                    return false;
-                }
-            }
-            return dir.delete();
-        } else if (dir != null && dir.isFile()) {
-            return dir.delete();
-        } else {
-            return false;
-        }
     }
 
     public void bug(View view) {

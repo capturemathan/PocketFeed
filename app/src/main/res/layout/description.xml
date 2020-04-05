@@ -40,7 +40,7 @@
             <io.github.capturemathan.pocketfeed.FButton
                 android:id="@+id/articleurl"
                 android:layout_width="170dp"
-                android:layout_height="110dp"
+                android:layout_height="80dp"
                 android:text="Detailed Article"
                 android:textAllCaps="true"
                 android:textColor="@color/icons"
@@ -50,7 +50,7 @@
             <io.github.capturemathan.pocketfeed.FButton
                 android:id="@+id/shareurl"
                 android:layout_width="170dp"
-                android:layout_height="110dp"
+                android:layout_height="80dp"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/articleurl"
                 android:text="Share article"

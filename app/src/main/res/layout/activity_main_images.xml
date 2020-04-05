@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,6 +9,7 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:padding="10dp"
         android:id="@+id/rel"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -22,8 +22,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:text="Pick your interest"
+            android:textAllCaps="true"
             android:textColor="@color/primary_text"
-            android:textSize="34dp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/desc"
@@ -33,7 +34,7 @@
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
             android:text="The latest newsfeed at your fingertips."
-            android:textSize="25dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/myname"
@@ -46,7 +47,7 @@
             android:text="© Mathana Kumar. S"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -55,7 +56,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/desc"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:baselineAligned="false"
             android:orientation="horizontal">
 
@@ -85,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:text="Business"
                         android:textColor="@color/primary_text"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </RelativeLayout>
@@ -118,7 +121,7 @@
                         android:layout_centerHorizontal="true"
                         android:text="Cinema"
                         android:textColor="@color/primary_text"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </RelativeLayout>
@@ -149,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:text="Health"
                         android:textColor="@color/primary_text"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </RelativeLayout>
@@ -193,7 +196,7 @@
                         android:layout_centerHorizontal="true"
                         android:text="Science"
                         android:textColor="@color/primary_text"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </RelativeLayout>
@@ -220,7 +223,7 @@
                     android:layout_centerHorizontal="true"
                     android:text="Sports"
                     android:textColor="@color/primary_text"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -246,25 +249,23 @@
                     android:layout_centerHorizontal="true"
                     android:text="Technology"
                     android:textColor="@color/primary_text"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </RelativeLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/l2">
+            android:layout_alignParentBottom="true">
 
             <com.sa90.materialarcmenu.ArcMenu
                 android:id="@+id/menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
                 android:longClickable="true"
                 app:menu_open="arc_right"
-                app:menu_radius="130dp"
+                app:menu_radius="100dp"
                 app:menu_scr="@drawable/menu_icon">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -290,6 +291,6 @@
                     android:src="@drawable/menu_about" />
 
             </com.sa90.materialarcmenu.ArcMenu>
-        </LinearLayout>
+        </RelativeLayout>
     </RelativeLayout>
 </ScrollView>

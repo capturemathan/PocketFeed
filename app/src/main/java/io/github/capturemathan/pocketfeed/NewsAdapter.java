@@ -2,7 +2,6 @@ package io.github.capturemathan.pocketfeed;
 
 import android.content.Context;
 import android.content.Intent;
-import androidx.core.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

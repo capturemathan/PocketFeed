@@ -7,11 +7,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -24,14 +24,37 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
     //private static final String NEWS_REQUEST_BASE_URL = "https://newsapi.org/v2/top-headlines?country=in&";
 
     //private static final String NEWS_CATEGORY_URL = obj.NEWS_CAT_URL;
-
-    private static String NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=c60dc7c66a474c03ba181227554788ee";
-
     private static final int NEWS_LOADER_ID = 1;
-
+    private static String NEWS_FETCH_URL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=c60dc7c66a474c03ba181227554788ee";
     private NewsAdapter mAdapter;
 
     private TextView mEmptyStateTextView;
+
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if (dir != null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,31 +143,5 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
     protected void onDestroy() {
         super.onDestroy();
         deleteCache(getBaseContext());
-    }
-
-    public static void deleteCache(Context context) {
-        try {
-            File dir = context.getCacheDir();
-            deleteDir(dir);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static boolean deleteDir(File dir) {
-        if (dir != null && dir.isDirectory()) {
-            String[] children = dir.list();
-            for (int i = 0; i < children.length; i++) {
-                boolean success = deleteDir(new File(dir, children[i]));
-                if (!success) {
-                    return false;
-                }
-            }
-            return dir.delete();
-        } else if (dir != null && dir.isFile()) {
-            return dir.delete();
-        } else {
-            return false;
-        }
     }
 }
