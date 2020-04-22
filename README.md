@@ -1,5 +1,5 @@
 # Pocket Feed
-![Version Badge](https://img.shields.io/endpoint?url=https://api-playstore.herokuapp.com/version?id=io.github.capturemathan.pocketfeed&color=blue&style=for-the-badge) ![Downloads Badge](https://img.shields.io/endpoint?url=https://api-playstore.herokuapp.com/downloads?id=io.github.capturemathan.pocketfeed&color=red&style=for-the-badge) ![Rating Badge](https://img.shields.io/endpoint?url=https://api-playstore.herokuapp.com/rating?id=io.github.capturemathan.pocketfeed&color=green&style=for-the-badge)
+![Version Badge](https://img.shields.io/endpoint?url=https://api-playstore.rajkumaar.co.in/version?id=io.github.capturemathan.pocketfeed&color=blue&style=for-the-badge) ![Downloads Badge](https://img.shields.io/endpoint?url=https://api-playstore.rajkumaar.co.in/downloads?id=io.github.capturemathan.pocketfeed&color=red&style=for-the-badge) ![Rating Badge](https://img.shields.io/endpoint?url=https://api-playstore.rajkumaar.co.in/rating?id=io.github.capturemathan.pocketfeed&color=green&style=for-the-badge)
 
 <img align="left" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Home%20Screen.png">
 <img align="center" width="180" height="300" src="https://github.com/capturemathan/PocketFeed/blob/master/v3%20Screenshots/Content.png">
